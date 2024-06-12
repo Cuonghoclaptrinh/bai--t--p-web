@@ -1,7 +1,7 @@
 
 
 const listimg = document.querySelector('.list-images');
-const imgs = document.querySelectorAll('.list-images img');
+const imgs = document.querySelectorAll('.list-images .img');
 const length = imgs.length;
 const btnleft=document.querySelector('.btn-left');
 const btnright=document.querySelector('.btn-right');
@@ -49,3 +49,5 @@ btnleft.addEventListener('click' , () => {
     
     handleeventchangeslide = setInterval(handechangeslide , 4000);
 })
+
+

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ Hàng</title>
+    <link rel="stylesheet" href="test2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="content">
+        <div class="cart-container">
+            <h1>Giỏ Hàng</h1>
+            <button class="close-btn" onclick="goToHomePage()"><i class="fas fa-times"></i></button>
+        </div>
+        
+        <div class="table">
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Sản phẩm</th>
+                        <th>Giá</th>
+                        <th>Số lượng</th>
+                        <th>Tổng</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Sản phẩm sẽ được thêm vào đây -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="cart-total">
+            <h2>Tổng cộng</h2>
+            <p>0đ</p>
+            <button class="checkout-btn">Thanh Toán</button>
+        </div>
+    </div>
+
+    <script>
+        function goToHomePage() {
+            window.location.href = "test.html"; // Thay đổi index.html thành đường dẫn thực sự của trang chủ
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const cartTableBody = document.querySelector('.cart-table tbody');
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Log the cart to check if it's loading correctly
+            console.log('Cart loaded from Local Storage:', cart);
+
+            function renderCart() {
+                cartTableBody.innerHTML = '';
+                let total = 0;
+
+                cart.forEach(item => {
+                    const row = document.createElement('tr');
+
+                    row.innerHTML = `
+                        <td class="cart-product">
+                            <img src="${item.img}" alt="${item.name}">
+                            <span>${item.name}</span>
+                        </td>
+                        <td>${item.price}</td>
+                        <td>
+                            <input type="number" value="${item.quantity}" min="1" data-product-name="${item.name}" style="width: 50px;">
+                        </td>
+                        <td>${(parseFloat(item.price.replace(/\./g, '').replace('đ', '')) * item.quantity).toLocaleString('vi-VN')}đ</td>
+                        <td>
+                            <button class="remove-btn" data-product-name="${item.name}">Xóa</button>
+                        </td>
+                    `;
+
+                    cartTableBody.appendChild(row);
+                    if (item.price) {
+                        total += parseFloat(item.price.replace(/\./g, '').replace('đ', '')) * item.quantity;
+}
+
+                });
+
+                document.querySelector('.cart-total p').innerText = total.toLocaleString('vi-VN') + 'đ';
+                addEventListeners();
+            }
+
+            function addEventListeners() {
+                const quantityInputs = document.querySelectorAll('input[type="number"]');
+                const removeButtons = document.querySelectorAll('.remove-btn');
+
+                quantityInputs.forEach(input => {
+                    input.addEventListener('change', function() {
+                        const productName = this.getAttribute('data-product-name');
+                        const newQuantity = parseInt(this.value);
+                        if (newQuantity > 0) {
+                            updateQuantity(productName, newQuantity);
+                        } else {
+                            this.value = 1; // Đảm bảo số lượng không nhỏ hơn 1
+                            updateQuantity(productName, 1);
+                        }
+                    });
+                });
+
+                removeButtons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        const productName = this.getAttribute('data-product-name');
+                        removeFromCart(productName);
+                    });
+                });
+            }
+
+            function updateQuantity(productName, newQuantity) {
+                cart = cart.map(item => {
+                    if (item.name === productName) {
+                        item.quantity = newQuantity;
+                    }
+                    return item;
+                });
+                localStorage.setItem('cart', JSON.stringify(cart));
+                renderCart();
+            }
+
+            function removeFromCart(productName) {
+                cart = cart.filter(item => item.name !== productName);
+                localStorage.setItem('cart', JSON.stringify(cart));
+                renderCart();
+            }
+
+            renderCart();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRANG CHỦ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <div class="logo__header">
+            <img src="" alt="logo">
+        </div>
+        <div class="container">
+            <div class="menu__header">
+                <ul class="menu">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Product</a></li>
+                    <li><a href="">Brand</a></li>
+                    <li><a href="">About us</a></li>
+                    <li><a href="">Log in</a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <div class="search_text">
+                    <div>
+                        <input type="search" name="search" placeholder="Tìm kiếm của bạn...">
+                        <a href="#" class="search-button"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+                </div>
+                <div class="card"><a href="test2.html" id="card__header"><i class="fa-solid fa-cart-plus"></i></a></div>
+            </div>
+        </div>
+    </header>
+    <div class="container-catelogue">
+        <div class="grid">
+            <div class="grid__row">
+                <div class="grid__column_2">
+                    <nav class="catelogue">
+                        <h3 class="catelogue-heading">
+                            <i class="catelogue-heading-icon fa-solid fa-list"></i>
+                            Danh mục
+                        </h3>
+                        <ul class="catelogue-list">
+                            <li class="catelogue-item active"><a href="#best_sellers" class="catelogue-item-link">Best sellers</a></li>
+                            <li class="catelogue-item"><a href="#just_for_you" class="catelogue-item-link">Just for you</a></li>
+                            <li class="catelogue-item"><a href="#new_products" class="catelogue-item-link">New products</a></li>
+                            <li class="catelogue-item"><a href="#discounted_products" class="catelogue-item-link">Discount</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="grid__column_8">
+                    <div class="classify">
+                        <div class="select-input">
+                            <span class="select-input-label">Giá</span>
+                            <i class="select-input-icon fa-solid fa-angle-down"></i>
+                            <ul class="select-list">
+                                <li class="select-input-link"><a href="">Cao đến thấp</a></li>
+                                <li class="select-input-link"><a href="">Thấp đến cao</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h1 id="best_sellers"><span>BEST SELLERS</span></h1>
+                    <div class="home-product">
+                        <div class="grid__row-2">
+                            <div class="grid__column_25">
+                                <!-- product item -->
+                                <a class="home-product-item" href="">
+                                    <div class="home-product-item-img" style="background-image: url('unnamed.jpg');"></div>
+                                    <h4 class="home-product-item-name">Sản phẩm 1</h4>
+                                    <div class="home-product-item-price">
+                                        <span class="home-product-item-price-old">12.000.000đ</span>
+                                        <span class="home-product-item-price-current">9.000.000đ</span>
+                                    </div>
+                                    <div class="home-product-action">
+                                        <span class="home-product-like"><i class="fa-regular fa-heart"></i></span>
+                                        <button class="home-product-add" data-product-id="1">Add</button>
+                                    </div>
+                                    <div class="home-product-item-favourite">
+                                        <i class="fa-solid fa-check"></i>
+                                        Yêu thích
+                                    </div>
+                                    <div class="home-product-item-sale_off">
+                                        <span class="home-product-item-sale_off-percent">10%</span>
+                                        <span class="home-product-item-sale_off-label">Reduce</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Thêm các sản phẩm khác theo cách tương tự -->
+                            <div class="grid__column_25">
+                                <!-- product item -->
+                                <a class="home-product-item" href="">
+                                    <div class="home-product-item-img" style="background-image: url('unnamed.jpg');"></div>
+                                    <h4 class="home-product-item-name">Sản phẩm 2</h4>
+                                    <div class="home-product-item-price">
+                                        <span class="home-product-item-price-old">12.000.000đ</span>
+                                        <span class="home-product-item-price-current">10.000.000đ</span>
+                                    </div>
+                                    <div class="home-product-action">
+                                        <span class="home-product-like"><i class="fa-regular fa-heart"></i></span>
+                                        <button class="home-product-add" data-product-id="2">Add</button>
+                                    </div>
+                                    <div class="home-product-item-favourite">
+                                        <i class="fa-solid fa-check"></i>
+                                        Yêu thích
+                                    </div>
+                                    <div class="home-product-item-sale_off">
+                                        <span class="home-product-item-sale_off-percent">10%</span>
+                                        <span class="home-product-item-sale_off-label">Reduce</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const addButtons = document.querySelectorAll('.home-product-add');
+
+            addButtons.forEach(button => {
+                button.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const productElement = this.closest('.home-product-item');
+                    const productName = productElement.querySelector('.home-product-item-name').innerText;
+                    const productPrice = productElement.querySelector('.home-product-item-price-current').innerText;
+                    const productImg = productElement.querySelector('.home-product-item-img').style.backgroundImage.replace('url("', '').replace('")', '');
+
+                    addToCart(productName, productPrice, productImg);
+                });
+            });
+
+            function addToCart(name, price, img) {
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                
+                const existingProduct = cart.find(item => item.name === name);
+
+                if (existingProduct) {
+                    existingProduct.quantity += 1; 
+                } else {
+                    
+                    cart.push({ name, price, img, quantity: 1 });
+                }
+
+                
+                localStorage.setItem('cart', JSON.stringify(cart));
+                alert('Product added to cart!');
+            }
+        });
+        
+    </script>
+</body>
+</html>
