@@ -1,0 +1,56 @@
+
+
+
+
+/* Body */
+body{
+    background-color: rgba(150, 70, 253,0.05);
+}
+
+.containt-about-us{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: block;
+}
+
+.content-about-us, .image {
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+.content-about-us {
+    width: 40%;
+    padding-top: 30px;
+    height: 200px;
+    text-align: left; /* Căn trái nội dung văn bản */
+}
+
+
+.image {
+    width: 20%;
+    height: 150px; /* Chiều cao cố định cho khối hình ảnh */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.our-history{
+    width: 100%;
+    text-align: center;
+    
+}
+
+.our-history-content {
+    display: block;
+    width: 60%; 
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px auto; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-align: left;
+} 

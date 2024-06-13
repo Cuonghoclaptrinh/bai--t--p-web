@@ -661,6 +661,129 @@
         </div>
     </div>
 
+    <div class="testimonials" style="background-image: url('logo2.png');">
+        <h1>TESTIMONIALS</h1>
+        <div class="testimonials-slide-show-img">
+            <div class="testimonials-slide-show">
+                <div class="testimonials-list-images">
+                    <div class="img" style="background-image: url('59-dua-leo-baby_0a5e3a81dafb4265a2d3c760252e4951.webp');"></div>
+                    <div class="img" style="background-image: url('unnamed.jpg');"></div>
+                    <div class="img" style="background-image: url('59-dua-leo-baby_0a5e3a81dafb4265a2d3c760252e4951.webp');"></div>
+                    <div class="img" style="background-image: url('59-dua-leo-baby_0a5e3a81dafb4265a2d3c760252e4951.webp');"></div>
+                    <div class="img" style="background-image: url('59-dua-leo-baby_0a5e3a81dafb4265a2d3c760252e4951.webp');"></div>
+                </div>
+            </div>
+            <div class="testimonials-btns">
+                <div class="testimonials-btn-left btn"><i class='bx bx-chevron-left'></i></box-icon></div>
+                <div class="testimonials-btn-right btn"><i class='bx bx-chevron-right'></i></box-icon></div>
+            </div>
+            <div class="testimonials-index-images">
+                <div class="testimonials-index-items index-items-0 active"></div>
+                <div class="testimonials-index-items index-items-1"></div>
+                <div class="testimonials-index-items index-items-2"></div>
+                <div class="testimonials-index-items index-items-3"></div>
+                <div class="testimonials-index-items index-items-4"></div>
+            </div>
+        </div>
+    </div>
+    <!-- <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.testimonials-list-images .img');
+            const prevBtn = document.querySelector('.testimonials-btn-left');
+            const nextBtn = document.querySelector('.testimonials-btn-right');
+            const dots = document.querySelectorAll('.testimonials-index-items');
+            let currentIndex = 0;
+    
+            function updateSlide(position) {
+                document.querySelector('.testimonials-slide-show').style.transform = `translateX(-${position * 100}%)`;
+                dots.forEach(dot => dot.classList.remove('active'));
+                dots[position].classList.add('active');
+            }
+    
+            function showNextSlide() {
+                currentIndex = (currentIndex + 1) % slides.length;
+                updateSlide(currentIndex);
+            }
+    
+            function showPrevSlide() {
+                currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                updateSlide(currentIndex);
+            }
+    
+            nextBtn.addEventListener('click', showNextSlide);
+            prevBtn.addEventListener('click', showPrevSlide);
+    
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentIndex = index;
+                    updateSlide(currentIndex);
+                });
+            });
+        });
+    </script> -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.testimonials-list-images .img');
+            const slideContainer = document.querySelector('.testimonials-slide-show');
+            const prevBtn = document.querySelector('.testimonials-btn-left');
+            const nextBtn = document.querySelector('.testimonials-btn-right');
+            const dots = document.querySelectorAll('.testimonials-index-items');
+            let currentIndex = 0;
+            let autoSlideInterval;
+    
+            function updateSlide(position) {
+                slideContainer.style.transform = `translateX(-${position * 100}%)`;
+                dots.forEach(dot => dot.classList.remove('active'));
+                dots[position].classList.add('active');
+            }
+    
+            function showNextSlide() {
+                currentIndex = (currentIndex + 1) % slides.length;
+                updateSlide(currentIndex);
+            }
+    
+            function showPrevSlide() {
+                currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                updateSlide(currentIndex);
+            }
+    
+            function startAutoSlide() {
+                autoSlideInterval = setInterval(showNextSlide, 3000);
+            }
+    
+            function stopAutoSlide() {
+                clearInterval(autoSlideInterval);
+            }
+    
+            nextBtn.addEventListener('click', () => {
+                stopAutoSlide();
+                showNextSlide();
+                startAutoSlide();
+            });
+    
+            prevBtn.addEventListener('click', () => {
+                stopAutoSlide();
+                showPrevSlide();
+                startAutoSlide();
+            });
+    
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    stopAutoSlide();
+                    currentIndex = index;
+                    updateSlide(currentIndex);
+                    startAutoSlide();
+                });
+            });
+    
+            // Initial call to set the first slide and start the auto slide
+            updateSlide(currentIndex);
+            startAutoSlide();
+        });
+    </script>
+    
+    
+
     <footer class="footer">
         <div class="footer-about-us">
             <h3>About us</h3>

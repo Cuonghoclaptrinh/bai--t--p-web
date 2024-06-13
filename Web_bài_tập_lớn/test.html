@@ -1,158 +1,397 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRANG CHỦ</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="cart.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
-<body>
-    <header>
-        <div class="logo__header">
-            <img src="" alt="logo">
-        </div>
-        <div class="container">
-            <div class="menu__header">
-                <ul class="menu">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Product</a></li>
-                    <li><a href="">Brand</a></li>
-                    <li><a href="">About us</a></li>
-                    <li><a href="">Log in</a></li>
-                </ul>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="assests/css/style.css">
+        <title>Product</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+    </head>
+    <body>
+        <header>
+            <div class="logo__header" style="background-image: url(https://github.com/zietbinn/Shop-House/blob/main/contact/assets/img/logo2.png?raw=true);">
+                <p>Shop <span>House</span></p>
             </div>
-            <div class="search">
-                <div class="search_text">
-                    <div>
-                        <input type="search" name="search" placeholder="Tìm kiếm của bạn...">
-                        <a href="#" class="search-button"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <div class="container">
+                <div class="menu__header">
+                    <ul class="menu">
+                        <li class="header-active"><a href="" >Home</a></li>
+                        <li><a href="">Product</a></li>
+                        <li><a href="">Brand</a></li>
+                        <li><a href="">About us</a></li>
+                        <li><a href="">Log in</a></li>
+                    </ul>
+                </div>
+                <div class="search">
+                    <div class="search_text">
+                        <div class="search_text_1">
+                            <input type="search" name="search " placeholder="search products ...">
+                            <a href="#" class="search-button"><i class="fa-solid fa-magnifying-glass"></i></a>
+                        </div>
+                    </div>
+                    <div class="cart"><a href="cart.html" id="cart__header"><i class="fa-solid fa-cart-plus"></i></a></i>
                     </div>
                 </div>
-                <div class="card"><a href="test2.html" id="card__header"><i class="fa-solid fa-cart-plus"></i></a></div>
             </div>
-        </div>
-    </header>
-    <div class="container-catelogue">
-        <div class="grid">
-            <div class="grid__row">
+        </header>
+        <div class="homepage">
+            <aside> 
                 <div class="grid__column_2">
-                    <nav class="catelogue">
-                        <h3 class="catelogue-heading">
-                            <i class="catelogue-heading-icon fa-solid fa-list"></i>
-                            Danh mục
+                    <nav class="catalogue">
+                        <h3 class="catalogue-heading">
+                            <i class="fa-solid fa-lightbulb"></i>
+                            FILTER
                         </h3>
-                        <ul class="catelogue-list">
-                            <li class="catelogue-item active"><a href="#best_sellers" class="catelogue-item-link">Best sellers</a></li>
-                            <li class="catelogue-item"><a href="#just_for_you" class="catelogue-item-link">Just for you</a></li>
-                            <li class="catelogue-item"><a href="#new_products" class="catelogue-item-link">New products</a></li>
-                            <li class="catelogue-item"><a href="#discounted_products" class="catelogue-item-link">Discount</a></li>
+                        <ul class="catalogue-list">
+                            <li class="catalogue-item-type">
+                                <h4>Types</h4>
+                            </li>
+                            <li class="catalogue-item">
+                                <a href="bulbs.html" class="catalogue-item-link">Bulbs</a>
+                            </li>
+                            <li class="catalogue-item">
+                                <a href="Sport Lights.html" class="catalogue-item-link">Sport Lights</a>
+                            </li>
+                            <li class="catalogue-item">
+                                <a href="Decoration Lights.html" class="catalogue-item-link">Decoration Lights</a>
+                            </li>
+                            <li class="catalogue-item">
+                                <a href="Smart Lights.html" class="catalogue-item-link">Smart Lights</a>
+                            </li>
+                        </ul>
+                        <ul class="catalogue-list">
+                            <li class="catalogue-item-type">
+                                <h4>Brands</h4>
+                            </li>
+                            <li class="catalogue-item">
+                                 <a href="GE Lighting.html" class="catalogue-item-link">GE Lighting</a>
+                            </li>
+                            <li class="catalogue-item">
+                                <a href="Viribright.html" class="catalogue-item-link">Viribright</a>
+                            </li>
+                            <li class="catalogue-item">
+                                <a href="RangDong.html" class="catalogue-item-link">Rang Dong</a>
+                            </li>
+                            <li class="catalogue-item">
+                                <a href="Govee.html" class="catalogue-item-link">Govee</a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
-                <div class="grid__column_8">
-                    <div class="classify">
-                        <div class="select-input">
-                            <span class="select-input-label">Giá</span>
-                            <i class="select-input-icon fa-solid fa-angle-down"></i>
-                            <ul class="select-list">
-                                <li class="select-input-link"><a href="">Cao đến thấp</a></li>
-                                <li class="select-input-link"><a href="">Thấp đến cao</a></li>
-                            </ul>
+            </aside>
+            
+            <div class="grid__column_10">
+                <ul class="hmenu">
+                    <li class="ob">Oder By</li>
+                    <li><a href="#">Best Sellers</a></li>
+                    <li><a href="#">Just For You</a></li>
+                    <li><a href="#">New Items</a></li>
+                    <li>
+                        <select id="price" name="price">
+                            <option value="">Price</option>
+                            <option value="1">Low to high price</option>
+                            <option value="2">High to low price</option>
+                        </select>
+                    </li>
+                    <li class="home_filters_page">
+                        <span class="home_filters_page_num">
+                            <span class="home_filters_page_num_curr">3</span>/5
+                        </span>
+                        <div class="home_filters_page_icon">
+                            <a href="product2.html" class="home_filters_page_btn">
+                                <i class="home_filters_page_btn_icon fas fa-angle-left"></i>
+                            </a>
+                            <a href="product4.html" class="home_filters_page_btn">
+                                <i class="home_filters_page_btn_icon fas fa-angle-right"></i>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="content">
+                    <div class="grid__column_4">
+                        <div class="product_item">
+                            <a href="">
+                            <div class="product_item_img" style="background-image: url(https://i.ebayimg.com/images/g/o2AAAOSwa7JllLfY/s-l1600.webp);"></div>
+                            <h4 id="chuoiCanCat" class="product_item_name">Viribright 8W (40W) LED Light Bulb </h4>
+                            <div class="product_item_price">
+                                <span class="product_item_price_old">12,99$</span>
+                                <span class="product_item_price_new">10$</span>
+                            </div>
+                            <div class="product_action">
+                                <div class="product_action_rating">
+                                    <i class=" fa-solid fa-star"></i>
+                                    <i class=" fa-solid fa-star"></i>
+                                    <i class=" fa-solid fa-star"></i>
+                                    <i class=" fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                </div>
+                            </div>
+                            <div class="product_origin">
+                                <span class="product_origin_brand">Viribright</span>
+                                <span class="product_origin_name">America</span>
+                            </div>
+                            <div class="product_saleoff">
+                                <span class="product_saleoff_percent">23%</span>
+                                <span class="product_saleoff_label">Sale Off</span>
+                            </div>
+                        </a>
                         </div>
                     </div>
-                    <h1 id="best_sellers"><span>BEST SELLERS</span></h1>
-                    <div class="home-product">
-                        <div class="grid__row-2">
-                            <div class="grid__column_25">
-                                <!-- product item -->
-                                <a class="home-product-item" href="">
-                                    <div class="home-product-item-img" style="background-image: url('unnamed.jpg');"></div>
-                                    <h4 class="home-product-item-name">Sản phẩm 1</h4>
-                                    <div class="home-product-item-price">
-                                        <span class="home-product-item-price-old">12.000.000đ</span>
-                                        <span class="home-product-item-price-current">9.000.000đ</span>
-                                    </div>
-                                    <div class="home-product-action">
-                                        <span class="home-product-like"><i class="fa-regular fa-heart"></i></span>
-                                        <button class="home-product-add" data-product-id="1">Add</button>
-                                    </div>
-                                    <div class="home-product-item-favourite">
-                                        <i class="fa-solid fa-check"></i>
-                                        Yêu thích
-                                    </div>
-                                    <div class="home-product-item-sale_off">
-                                        <span class="home-product-item-sale_off-percent">10%</span>
-                                        <span class="home-product-item-sale_off-label">Reduce</span>
-                                    </div>
-                                </a>
+                    <div class="grid__column_4">
+                        <div class="product_item">
+                            <a href="">
+                            <div class="product_item_img" style="background-image: url(https://bizweb.dktcdn.net/thumb/large/100/201/056/products/d-csd02-70w-2-d9f194dd-ee39-41f9-8cd1-a5a0bd5f13fc.jpg?v=1540795951257);"></div>
+                            <h4 id="chuoiCanCat" class="product_item_name">Rang Dong D CSD02L/70W LED Street Light</h4>
+                            <div class="product_item_price">
+                                <span class="product_item_price_old">3,5$</span>
+                                <span class="product_item_price_new">3$</span>
                             </div>
-                            <!-- Thêm các sản phẩm khác theo cách tương tự -->
-                            <div class="grid__column_25">
-                                <!-- product item -->
-                                <a class="home-product-item" href="">
-                                    <div class="home-product-item-img" style="background-image: url('unnamed.jpg');"></div>
-                                    <h4 class="home-product-item-name">Sản phẩm 2</h4>
-                                    <div class="home-product-item-price">
-                                        <span class="home-product-item-price-old">12.000.000đ</span>
-                                        <span class="home-product-item-price-current">10.000.000đ</span>
-                                    </div>
-                                    <div class="home-product-action">
-                                        <span class="home-product-like"><i class="fa-regular fa-heart"></i></span>
-                                        <button class="home-product-add" data-product-id="2">Add</button>
-                                    </div>
-                                    <div class="home-product-item-favourite">
-                                        <i class="fa-solid fa-check"></i>
-                                        Yêu thích
-                                    </div>
-                                    <div class="home-product-item-sale_off">
-                                        <span class="home-product-item-sale_off-percent">10%</span>
-                                        <span class="home-product-item-sale_off-label">Reduce</span>
-                                    </div>
-                                </a>
+                            <div class="product_action">
+                                <div class="product_action_rating">
+                                    <i class=" fa-solid fa-star"></i>
+                                    <i class=" fa-solid fa-star"></i>
+                                    <i class=" fa-solid fa-star"></i>
+                                    <i class=" fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                </div>
                             </div>
+                            <div class="product_origin">
+                                <span class="product_origin_brand">Rang Dong</span>
+                                <span class="product_origin_name">Viet Nam</span>
+                            </div>
+                            <div class="product_saleoff">
+                                <span class="product_saleoff_percent">17%</span>
+                                <span class="product_saleoff_label">Sale Off</span>
+                            </div>
+                        </a>
+                        </div>
+                    </div>
+                    <div class="grid__column_4">
+                        <div class="product_item">
+                            <a href="">
+                            <div class="product_item_img" style="background-image: url(https://cdnb2b.raptorsupplies.com/pub/media/catalog/product/GE-LIGHTING-100300-Mog-Base.JPG);"></div>
+                            <h4 id="chuoiCanCat" class="product_item_name">GE LIGHTING Incandescent Bulb 100/300 Mog Base Ps25d 100/200w</h4>
+                            <div class="product_item_price">
+                                <span class="product_item_price_old">76,62$</span>
+                                <span class="product_item_price_new">70,80$</span>
+                            </div>
+                            <div class="product_action">
+                                <div class="product_action_rating">
+                                    <i class=" fa-solid fa-star"></i>
+                                    <i class=" fa-solid fa-star"></i>
+                                    <i class=" fa-solid fa-star"></i>
+                                    <i class=" fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                </div>
+                            </div>
+                            <div class="product_origin">
+                                <span class="product_origin_brand">GE Lighting</span>
+                                <span class="product_origin_name">America</span>
+                            </div>
+                            <div class="product_saleoff">
+                                <span class="product_saleoff_percent">8%</span>
+                                <span class="product_saleoff_label">Sale Off</span>
+                            </div>
+                        </a>
+                        </div>
+                    </div>
+                    <div class="grid__column_4">
+                        <div class="product_item">
+                            <a href="">
+                            <div class="product_item_img" style="background-image: url(https://images-na.ssl-images-amazon.com/images/I/61hAat5ayaL.jpg);"></div>
+                            <h4 id="chuoiCanCat" class="product_item_name">General Electric FC8T9/CW GE Fluorescent Lamp 33774 8" Cool White </h4>
+                            <div class="product_item_price">
+                                <span class="product_item_price_old">156,48$</span>
+                                <span class="product_item_price_new">148$</span>
+                            </div>
+                            <div class="product_action">
+                                <div class="product_action_rating">
+                                    <i class=" fa-solid fa-star"></i>
+                                    <i class=" fa-solid fa-star"></i>
+                                    <i class=" fa-solid fa-star"></i>
+                                    <i class=" fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                </div>
+                            </div>
+                            <div class="product_origin">
+                                <span class="product_origin_brand">GE Lighting</span>
+                                <span class="product_origin_name">America</span>
+                            </div>
+                            <div class="product_saleoff">
+                                <span class="product_saleoff_percent">6%</span>
+                                <span class="product_saleoff_label">Sale Off</span>
+                            </div>
+                        </a>
+                        </div>
+                    </div>
+                    <div class="grid__column_4">
+                        <div class="product_item">
+                            <a href="">
+                            <div class="product_item_img" style="background-image: url(https://dientoancau.vn/wp-content/uploads/2024/04/bo-den-led-m18-cam-bien-rang-dong-36w.jpg);"></div>
+                            <h4 id="chuoiCanCat" class="product_item_name">Rang Dong M18 Motion Sensor LED Light Kit</h4>
+                            <div class="product_item_price">
+                                <span class="product_item_price_old">28,34$</span>
+                                <span class="product_item_price_new">20$</span>
+                            </div>
+                            <div class="product_action">
+                                <div class="product_action_rating">
+                                    <i class=" fa-solid fa-star"></i>
+                                    <i class=" fa-solid fa-star"></i>
+                                    <i class=" fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="product_origin">
+                                <span class="product_origin_brand">Rang Dong</span>
+                                <span class="product_origin_name">Viet Nam</span>
+                            </div>
+                            <div class="product_saleoff">
+                                <span class="product_saleoff_percent">30%</span>
+                                <span class="product_saleoff_label">Sale Off</span>
+                            </div>
+                        </a>
+                        </div>
+                    </div>
+                    <div class="grid__column_4">
+                        <div class="product_item">
+                            <a href="">
+                            <div class="product_item_img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lu6gujyc2sk10a_tn);"></div>
+                            <h4 id="chuoiCanCat" class="product_item_name">Rang Dong LED Bulb</h4>
+                            <div class="product_item_price">
+                                <span class="product_item_price_old">5,90$</span>
+                                <span class="product_item_price_new">5$</span>
+                            </div>
+                            <div class="product_action">
+                                <div class="product_action_rating">
+                                    <i class=" fa-solid fa-star"></i>
+                                    <i class=" fa-solid fa-star"></i>
+                                    <i class=" fa-solid fa-star"></i>
+                                    <i class=" fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                </div>
+                            </div>
+                            <div class="product_origin">
+                                <span class="product_origin_brand">Rang Dong</span>
+                                <span class="product_origin_name">Viet Nam</span>
+                            </div>
+                            <div class="product_saleoff">
+                                <span class="product_saleoff_percent">16%</span>
+                                <span class="product_saleoff_label">Sale Off</span>
+                            </div>
+                        </a>
                         </div>
                     </div>
                 </div>
+                <div class="page">
+                    <ul class="pagination">
+                        <li><a href="product2.html"><i class="fa-solid fa-backward"></i></a></li>
+                        <li><a href="product.html">1</a></li>
+                        <li><a href="product2.html">2</a></li>
+                        <li><a href="product3.html">3</a></li>
+                        <li><a href="product4.html">4</a></li>
+                        <li><a href="product5.html">5</a></li>
+                        <li><a href="product4.html"><i class="fa-solid fa-forward"></i></a></li>
+                    </ul>
+                </div>
             </div>
+            
         </div>
-    </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const addButtons = document.querySelectorAll('.home-product-add');
-
-            addButtons.forEach(button => {
-                button.addEventListener('click', function(event) {
-                    event.preventDefault();
-                    const productElement = this.closest('.home-product-item');
-                    const productName = productElement.querySelector('.home-product-item-name').innerText;
-                    const productPrice = productElement.querySelector('.home-product-item-price-current').innerText;
-                    const productImg = productElement.querySelector('.home-product-item-img').style.backgroundImage.replace('url("', '').replace('")', '');
-
-                    addToCart(productName, productPrice, productImg);
-                });
-            });
-
-            function addToCart(name, price, img) {
-                let cart = JSON.parse(localStorage.getItem('cart')) || [];
-                
-                const existingProduct = cart.find(item => item.name === name);
-
-                if (existingProduct) {
-                    existingProduct.quantity += 1; 
-                } else {
-                    
-                    cart.push({ name, price, img, quantity: 1 });
+        <script>
+            function catChuoi(str, maxLength) {
+                if (str.length > maxLength) {
+                    return str.slice(0, maxLength - 3) + '...';
                 }
-
-                
-                localStorage.setItem('cart', JSON.stringify(cart));
-                alert('Product added to cart!');
+                return str;
             }
-        });
-        
-    </script>
-</body>
+            
+            window.onload = function() {
+                var productItems = document.querySelectorAll(".product_item_name");
+                for (var i = 0; i < productItems.length; i++) {
+                var h4Element = productItems[i];
+                var chuoiGoc = h4Element.innerHTML;
+                var doDaiToiDa = 60; // $iều chỉnh $ộ dài tối $a ở $ây
+                var chuoiDaCat = catChuoi(chuoiGoc, doDaiToiDa);
+                h4Element.innerHTML = chuoiDaCat;
+            }
+};
+        </script>
+                <footer>
+            <div class="footer__main">
+                <div class="footer__item">
+                    <h3>About Us</h3>
+                    <p>Shop house is a store that sells the world's top-quality Computer.</p>
+                    <blockquote>"Your satisfaction is our pleasure"</blockquote>
+                    <div class="footer__social">
+                        <a href="https://www.facebook.com/profile.php?id=100045347233210&mibextid=LQQJ4d"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100045347233210&mibextid=LQQJ4d"><i class="fa-brands fa-google-plus-g"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100045347233210&mibextid=LQQJ4d"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer__item">
+                    <h3>Working Time</h3>
+                    <div class="footer__time">
+                        <p>Monday</p>
+                        <p>9h30 - 18h30</p>
+                    </div>
+                    <div class="footer__time">
+                        <p>Tuesday</p>
+                        <p>9h30 - 18h30</p>
+                    </div>
+                    <div class="footer__time">
+                        <p>Wednesday</p>
+                        <p>9h30 - 18h30</p>
+                    </div>
+                    <div class="footer__time">
+                        <p>Thursday</p>
+                        <p>9h30 - 18h30</p>
+                    </div>
+                    <div class="footer__time">
+                        <p>Friday</p>
+                        <p>9h30 - 18h30</p>
+                    </div>
+                    <div class="footer__time">
+                        <p>Saturday</p>
+                        <p>9h30 - 18h30</p>
+                    </div>
+                    <div class="footer__time">
+                        <p>Sunday</p>
+                        <p>9h30 - 18h30</p>
+                    </div>
+                </div>
+                <div class="footer__item">
+                    <h3>Contact Us</h3>
+                    <p>Hà Nội branch <br>(+84) 1234-5678 <br>
+                        <a href="mailto:xuanv319@gmail.com?subject = Feedback&body = Message" class="footer__item-link">
+                            <span>xuanviet319@gmail.com</span>
+                        </a>
+                    </p>
+                    <p>Hồ Chí Minh branch <br>(+84) 6666-8888 <br>
+                        <a href="mailto:xuanv319@gmail.com?subject = Feedback&body = Message" class="footer__item-link">
+                            <span>lanh2408@gmail.com</span>
+                        </a>
+                    </p>
+                    <p>Bắc Ninh branch <br>(213) 054-2004 <br>
+                        <a href="mailto:xuanv319@gmail.com?subject = Feedback&body = Message" class="footer__item-link">
+                            <span>viet25@gmail.com</span>
+                        </a>
+                    </p>
+                </div>
+                <div class="footer__item">
+                    <h3>Subscribe Us</h3>
+                    <form class="footer__sub" action="#" id="signup" method="post">
+                        <div class="form-field">
+                            <input type="email" name="email" id="subscribe-email" placeholder="name@example.com" required><br>
+                            <small></small>
+                        </div>
+                        <button class="js-submit-subscribe" type="submit">Send</button>
+                    </form>
+                    <p>Sign up now to receive notifications as soon as a new product is added.</p>
+                </div>
+            </div>
+            <div class="footer__coppyright">
+                <p>&copy; Copyright 2024 | Design by <span>Xuân Việt</span></p>
+            </div>
+        </footer>
+    </body>
 </html>
